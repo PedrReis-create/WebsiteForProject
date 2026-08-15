@@ -1,0 +1,1 @@
+Just a simple site for an school project
