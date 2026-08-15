@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOTICA | The Future of Robotics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">ROBOTICA<span class="logo-dot">.</span></a>
+            
+            <nav class="nav-links">
+                <a href="#hero" class="active">Home</a>
+                <a href="#catalog">Robots</a>
+                <a href="#featured">Featured</a>
+                <a href="#about">About</a>
+                <a href="#support">Support</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search robots...">
+                    <button id="search-btn" class="icon-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+                <button id="cart-btn" class="icon-btn cart-icon-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span id="cart-badge" class="cart-badge">0</span>
+                </button>
+                <button class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <span class="badge">NEXT GENERATION AI</span>
+                <h1>Meet the future of robotics.</h1>
+                <p class="subtitle">Smart robots designed to assist, communicate and become part of your everyday life.</p>
+                <a href="#catalog" class="btn btn-primary">EXPLORE ROBOTS</a>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="glow-effect"></div>
+                <img src="assets/robot.png" alt="Featured Robot" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Main Product Section (Robo-Buddy X1 Focus) -->
+        <section id="featured" class="product-spotlight">
+            <div class="spotlight-container">
+                <div class="spotlight-image-container">
+                    <div class="glow-effect"></div>
+                    <img src="assets/robot.png" alt="Robo-Buddy X1" class="main-product-img">
+                </div>
+
+                <div class="spotlight-details">
+                    <div class="product-header">
+                        <span class="category-tag">COMPANION ROBOT</span>
+                        <h2>ROBO-BUDDY X1</h2>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="score">4.8 / 5.0</span>
+                            <span class="stock-badge">IN STOCK</span>
+                        </div>
+                        <div class="price">$899.99</div>
+                    </div>
+
+                    <p class="description">
+                        A friendly AI-powered companion designed to communicate, assist and interact with its owner.
+                    </p>
+
+                    <div class="features-list">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><span>✓</span> AI conversational system</li>
+                            <li><span>✓</span> Customizable voice</li>
+                            <li><span>✓</span> Facial recognition</li>
+                            <li><span>✓</span> Autonomous movement</li>
+                            <li><span>✓</span> Smart home integration</li>
+                            <li><span>✓</span> Emotional interaction system</li>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="open-voice-modal-btn" class="btn btn-secondary">TEST VOICE</button>
+                        <button id="buy-now-btn" class="btn btn-primary btn-glow">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="catalog" class="catalog-section">
+            <div class="section-title-wrapper">
+                <h2>EXPLORE OUR ROBOTS</h2>
+                <p>Advanced autonomous units for home, work, and personal assistance.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Companion">Companion</button>
+                <button class="filter-btn" data-filter="Assistant">Assistant</button>
+                <button class="filter-btn" data-filter="Home">Home</button>
+                <button class="filter-btn" data-filter="Security">Security</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="product-grid">
+                <!-- Products injected via JS -->
+            </div>
+            
+            <div id="no-results" class="no-results hidden">
+                <p>No robots found. Try another search or filter.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>ROBOTICA<span class="logo-dot">.</span></h3>
+                <p>The future is closer than you think.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 ROBOTICA Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Voice Test Modal -->
+    <div id="voice-modal" class="modal-overlay hidden">
+        <div class="modal-content voice-modal-content">
+            <button class="close-modal-btn" id="close-voice-modal">&times;</button>
+            <h2>CHOOSE YOUR ROBOT'S VOICE</h2>
+            <p class="modal-subtitle">Test and select the vocal persona for your Robo-Buddy X1</p>
+
+            <div class="voices-grid">
+                <div class="voice-card" data-voice="friendly">
+                    <h3>Voice 01</h3>
+                    <span class="voice-type">Friendly</span>
+                    <button class="btn btn-voice play-voice-btn" data-type="friendly">
+                        ▶ PLAY VOICE
+                    </button>
+                </div>
+
+                <div class="voice-card" data-voice="professional">
+                    <h3>Voice 02</h3>
+                    <span class="voice-type">Professional</span>
+                    <button class="btn btn-voice play-voice-btn" data-type="professional">
+                        ▶ PLAY VOICE
+                    </button>
+                </div>
+
+                <div class="voice-card" data-voice="robotic">
+                    <h3>Voice 03</h3>
+                    <span class="voice-type">Robotic</span>
+                    <button class="btn btn-voice play-voice-btn" data-type="robotic">
+                        ▶ PLAY VOICE
+                    </button>
+                </div>
+
+                <div class="voice-card" data-voice="calm">
+                    <h3>Voice 04</h3>
+                    <span class="voice-type">Calm</span>
+                    <button class="btn btn-voice play-voice-btn" data-type="calm">
+                        ▶ PLAY VOICE
+                    </button>
+                </div>
+            </div>
+
+            <div id="voice-status" class="voice-status hidden">
+                VOICE SELECTED ✓
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Confirmation Modal -->
+    <div id="purchase-modal" class="modal-overlay hidden">
+        <div class="modal-content purchase-modal-content">
+            <div id="checkout-step-1">
+                <h2>READY TO MEET YOUR NEW COMPANION?</h2>
+                <div class="order-summary-box">
+                    <div class="summary-item">
+                        <span>Product:</span>
+                        <strong>Robo-Buddy X1</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Selected Voice:</span>
+                        <strong id="summary-voice">Friendly (Default)</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Price:</span>
+                        <strong>$899.99</strong>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="cancel-purchase-btn" class="btn btn-secondary">CANCEL</button>
+                    <button id="confirm-purchase-btn" class="btn btn-primary">CONFIRM PURCHASE</button>
+                </div>
+            </div>
+
+            <div id="checkout-step-loading" class="hidden">
+                <div class="spinner"></div>
+                <h2>PROCESSING ORDER...</h2>
+                <p>Securing your unit and configuring vocal AI parameters...</p>
+            </div>
+
+            <div id="checkout-step-success" class="hidden">
+                <div class="success-icon">✓</div>
+                <h2>ORDER CONFIRMED ✓</h2>
+                <p class="success-msg">Your Robo-Buddy X1 is on its way.</p>
+                <div class="order-id-box">
+                    <span>Order Number:</span>
+                    <strong id="order-id-text">#RBT-98241</strong>
+                </div>
+                <button id="close-success-btn" class="btn btn-primary">DONE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer Side Panel -->
+    <div id="cart-overlay" class="cart-overlay hidden"></div>
+    <aside id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>YOUR CART</h3>
+            <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items added via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="cart-row total-row">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button id="cart-checkout-btn" class="btn btn-primary btn-block">CHECKOUT</button>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
